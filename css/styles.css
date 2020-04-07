@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
 }
+* { box-sizing: border-box; }
 
 /* FONTS */
 
@@ -325,6 +326,24 @@ a.work:hover .work-caption p{
 #case .case-images img{
     max-width: 100%;
     height: auto;
+}
+#case .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+#case .grid-sizer{
+    width: 32%;
+}
+#case .gutter-sizer{
+    width: 1%;
+}
+#case .grid-item {
+    width: 64%;
+    margin-bottom: 1%;
+}
+#case .grid-item--width2 {
+    width: 32%;
 }
 
 .swiper-slide#case {

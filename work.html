@@ -51,12 +51,31 @@
                         </p>
                     </div>
                     <div class="col case-images">
-                        <img src="images/work/work03.jpg" alt="">
-                        <img src="images/work/work03.jpg" alt="">
-                        <img src="images/work/work03.jpg" alt="">
-                        <img src="images/work/work03.jpg" alt="">
-                        <img src="images/work/work03.jpg" alt="">
-                        <img src="images/work/work03.jpg" alt="">
+                        <div class="grid">
+                            <div class="grid-sizer"></div>
+                            <div class="gutter-sizer"></div>
+                            <div class="grid-item">
+                                <img src="images/work/size1.jpg" alt="">
+                            </div>
+                            <div class="grid-item grid-item--width2">
+                                <img src="images/work/size2.jpg" alt="">
+                            </div>
+                            <div class="grid-item">
+                                <img src="images/work/size3.jpg" alt="">
+                            </div>
+                            <div class="grid-item">
+                                <img src="images/work/size1.jpg" alt="">
+                            </div>
+                            <div class="grid-item grid-item--width2">
+                                <img src="images/work/size2.jpg" alt="">
+                            </div>
+                            <div class="grid-item">
+                                <img src="images/work/size3.jpg" alt="">
+                            </div>
+                            <div class="grid-item grid-item--width2">
+                                <img src="images/work/size2.jpg" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,11 +99,19 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
     <script>
         $(window).on('load', function () {
             $('.loader-welcome').animate({top: 0}, 0, function() {
                 $('#loader').animate({top: '-100%'}, 1200);
             });
+        });
+        $('.grid').masonry({
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            gutter: '.gutter-sizer',
+            percentPosition: true
         });
     </script>
 </body>
