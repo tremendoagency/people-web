@@ -61,39 +61,64 @@
                 <div class="container">
                     <div class="col">
                         <p>
-                            People es una agencia de comunicación
-                            <span class="font-ogg">multidisciplinaria</span>
-                            con base en Buenos Aires. Somos gente diversa, proveniente de diferentes
-                            disciplinas asociadas a la comunicación, sentadas en una misma mesa,
-                            <span class="font-ogg">pensando para marcas.
+                            People es una agencia de comunicación <span class="font-ogg">multidisciplinaria</span>
+                            <br/>con base en Buenos Aires. Somos gente diversa,
+                            <br/>proveniente de diferentes disciplinas asociadas a la 
+                            <br/>comunicación, sentadas en una misma mesa,
+                            <span class="font-ogg">pensando
+                            <br/>para marcas.</span>
                         </p>
                     </div>
                 </div>
             </div>
             <div id="info" class="swiper-slide v-center" data-history="info">
                 <div class="container">
-                    <div class="col">
+                    <div class="col us">
+                        <p><a href="#">Quienes somos</a></p>
+                    </div>
+                    <div class="col about">
                         <p>
-                            No somos muchos, de hecho somos bastante pocos.
-                            Los suficientes para poder involucrarnos con los
-                            proyectos de nuestros clientes de manera profesional
-                            y personal. No creemos en los gurús de esta industria.
-                            Pero hay de lo que sí estamos seguros. La publicidad
-                            tiene que entreneter o emocionar.
-                            Y nosotros sabemos como hacerlo.
+                            No somos muchos, de hecho somos bastante pocos. Los
+                            <br/>suficientes para poder involucrarnos con los proyectos de
+                            <br/>nuestros clientes de manera profesional y personal. No
+                            <br/>creemos en los gurús de esta industria. Pero hay de lo que sí
+                            <br/>estamos seguros. La publicidad tiene que entreneter o
+                            <br/>emocionar. Y nosotros sabemos como hacerlo.
+                        </p>
+                    </div>
+                </div>
+                <div class="team">
+                    <div class="col">
+                        <p class="font-ogg">Camila Bessone</p>
+                        <p class="small">
+                            Licenciada en Marketing y Comercio Internacional.
+                            <br/>Trabajó para L’Oreal Argentina desarrollando campañas digitales y
+                            <br/>estrategias de marca.  
+                        </p>
+                    </div>
+                    <div class="separator"><hr></div>
+                    <div class="col">
+                        <p class="font-ogg">Agostina Cipollatti</p>
+                        <p class="small">
+                            Diseñadora gráfica y directoa de arte. Trabajó en agencias
+                            <br/>de publicidad y productoras de cine desarrollando
+                            <br/>campañas integrales y de TV para
+                            <br/>marcas como Toyota, Nescafé, Renault, Movistar,
+                            <br/>Cablevisión, Navarro Correas, etc.
                         </p>
                     </div>
                 </div>
             </div>
             <div id="services" class="swiper-slide" data-history="services">
+                <div class="services-hider"></div>
                 <div class="container">
                     <div class="col services-description v-center">
                         <p>
                             Ofrecemos una gran cantidad de
-                            servicios, para poder desarrollar
-                            campañas integrales que ayuden a las
-                            marcas a crear conexiones reales y
-                            duraderas con sus clientes.
+                            <br/>servicios, para poder desarrollar
+                            <br/>campañas integrales que ayuden a
+                            <br/>las marcas a crear conexiones
+                            <br/>reales y duraderas con sus clientes.
                         </p>
                     </div>
                     <div class="col services-list">
@@ -111,6 +136,16 @@
                         <p>mailing</p>
                         <p>medios</p>
                         <p>contenido audiovisual</p>
+                        <p>edición</p>
+                        <p>animación</p>
+                        <p>fotografía</p>
+                        <p>ilustración </p>
+                        <p>infografías</p>
+                        <p>eventos </p>
+                        <p>experiencias</p>
+                        <p>sponsoring</p>
+                        <p>advocacy</p>
+                        <p>entretenimiento</p>
                     </div>
                 </div>
             </div>
@@ -173,10 +208,10 @@
                             </a>
                         </div>
                     </div>
-                    <!-- Add Arrows 
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    -->
+                    <!-- Add Arrows -->
+                    <div class="move-right"></div>
+                    <div class="move-left"></div>
+                    
                 </div>
             </div>
             <div id="clients" class="swiper-slide v-center" data-history="clients">
@@ -218,11 +253,36 @@
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
+                        <div class="swiper-slide v-center">
+                            <a class="client" href="#">
+                                <img src="images/clients/client01.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide v-center">
+                            <a class="client" href="#">
+                                <img src="images/clients/client01.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide v-center">
+                            <a class="client" href="#">
+                                <img src="images/clients/client01.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide v-center">
+                            <a class="client" href="#">
+                                <img src="images/clients/client01.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide v-center">
+                            <a class="client" href="#">
+                                <img src="images/clients/client01.jpg" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="contact" class="swiper-slide v-center invert-menu" data-history="contact">
-                <div class="">
+                <div>
                     <h2 class="text-white text-center">
                         hablemos!
                     </h2>
@@ -260,32 +320,42 @@
     <!-- Initialize Swiper -->
     <script>
         $(window).on('load', function () {
-            $('.loader-welcome').animate({top: 0}, 0, function() {
+            $('.loader-welcome').animate({top: 0}, 2000, function() {
                 $('#loader').animate({top: '-100%'}, 1200);
             });
         });
         var navigation = new Swiper('#content', {
             speed: 1000,
             direction: 'vertical',
-            mousewheel: true
+            mousewheel: true,
+            forceToAxis: true
         });
         var works = new Swiper('#works .swiper-container', {
             spaceBetween: 10,
             freeMode: true,
             slidesPerView: 'auto',
-            grabCursor: true
+            grabCursor: true,
+            navigation: {
+            nextEl: '.move-right',
+            prevEl: '.move-left',
+        }
         });
         var clients = new Swiper('#clients .swiper-container', {
-            slidesPerView: 1,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: true,
+            },
             breakpoints: {
-                640: {
-                    slidesPerView: 2
-                },
                 768: {
-                    slidesPerView: 4
+                    slidesPerView: 3,
+                    slidesPerGroup: 3
                 },
                 1024: {
-                    slidesPerView: 6
+                    slidesPerView: 6,
+                    slidesPerGroup: 3
                 }
             }
         });
@@ -330,6 +400,29 @@
         $('nav li a').on( "click", function(event){
             event.preventDefault();
             navigation.slideTo($(this).attr('data-slide'));
+        });
+        $('#info .us a').on( "click", function(event){
+            event.preventDefault();
+
+            if($('#info .team').is(':visible')){
+                $(this).text('Quienes somos');
+            }else{
+                $(this).text('Cerrar');
+            }
+            $('#info .team').fadeToggle(300);
+            return false;
+
+        });
+        $('#works .swiper-wrapper').mousemove(function(event){
+            if (event.pageX <= $(window).width()/3){
+                works.translateTo(works.width, 5000);
+            }
+            else if (event.pageX >= ($(window).width()/3)*2){
+                works.translateTo(-works.width, 5000);
+            }
+            else{
+                works.translateTo(works.getTranslate(), 0);
+            }
         });
     </script>
 </body>

@@ -13,18 +13,6 @@
     <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 </head>
 <body>
-    <div id="loader">
-        <div class="loader-inner v-center">
-            <div class="container">
-                <div class="person person1"></div>
-                <div class="person person2"></div>
-                <div class="person person3"></div>
-            </div>
-        </div>
-        <div class="loader-welcome v-center">
-            <p class="font-ogg">Hola!</p>
-        </div>
-    </div>
     <nav class="inverted">
         <div class="container">
             <div class="col brand">
@@ -55,25 +43,25 @@
                             <div class="grid-sizer"></div>
                             <div class="gutter-sizer"></div>
                             <div class="grid-item">
-                                <img src="images/work/size1.jpg" alt="">
+                                <img class="lazy" data-src="images/work/size1.jpg" alt="">
                             </div>
                             <div class="grid-item grid-item--width2">
-                                <img src="images/work/size2.jpg" alt="">
+                                <img class="lazy" data-src="images/work/size2.jpg" alt="">
                             </div>
                             <div class="grid-item">
-                                <img src="images/work/size3.jpg" alt="">
+                                <img class="lazy" data-src="images/work/size3.jpg" alt="">
                             </div>
                             <div class="grid-item">
-                                <img src="images/work/size1.jpg" alt="">
+                                <img class="lazy" data-src="images/work/size1.jpg" alt="">
                             </div>
                             <div class="grid-item grid-item--width2">
-                                <img src="images/work/size2.jpg" alt="">
+                                <img class="lazy" data-src="images/work/size2.jpg" alt="">
                             </div>
                             <div class="grid-item">
-                                <img src="images/work/size3.jpg" alt="">
+                                <img class="lazy" data-src="images/work/size3.jpg" alt="">
                             </div>
                             <div class="grid-item grid-item--width2">
-                                <img src="images/work/size2.jpg" alt="">
+                                <img class="lazy" data-src="images/work/size2.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -84,6 +72,9 @@
     <footer class="inverted">
         <div class="container">
             <ul class="footer-links">
+                <li class="item">
+                    <a href="#">Cerrar</a>
+                </li>
                 <li class="item">
                     <a href="#">Anterior</a>
                 </li>
@@ -100,18 +91,32 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js"></script>
     <script>
         $(window).on('load', function () {
-            $('.loader-welcome').animate({top: 0}, 0, function() {
-                $('#loader').animate({top: '-100%'}, 1200);
-            });
+            
         });
-        $('.grid').masonry({
+        /*$('.grid').masonry({
             // options
             itemSelector: '.grid-item',
             columnWidth: '.grid-sizer',
             gutter: '.gutter-sizer',
             percentPosition: true
+        });*/
+        
+        var $container = $('.grid');
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: '.lazy',
+            load_delay: 300,
+            callback_finish: function(){
+                $container.masonry({
+                    itemSelector: '.grid-item',
+                    columnWidth: '.grid-sizer',
+                    gutter: '.gutter-sizer',
+                    percentPosition: true
+                });
+            }
         });
     </script>
 </body>
