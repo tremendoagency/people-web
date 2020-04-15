@@ -36,12 +36,12 @@ body {
     font-style: normal;
 }
 @font-face {
-    font-family: 'Ogg Bold';
-    src: url('fonts/Ogg-Bold.eot');
-    src: local('Ogg-Bold'),
-        url('fonts/Ogg-Bold.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Ogg-Bold.woff2') format('woff2'),
-        url('fonts/Ogg-Bold.woff') format('woff');
+    font-family: 'Ogg';
+    src: url('fonts/Ogg-Regular.eot');
+    src: local('Ogg-Regular'),
+        url('fonts/Ogg-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Ogg-Regular.woff2') format('woff2'),
+        url('fonts/Ogg-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -62,7 +62,7 @@ h2{
     font-weight: bold;
 }
 .font-ogg{
-    font-family: 'Ogg-Roman', serif;
+    font-family: 'Ogg', serif;
     font-weight: bold;
 }
 
@@ -203,7 +203,7 @@ nav .collapsable ul{
 nav .nav-item {
     display: inline-block;
     list-style: none;
-    padding-right: 50px;
+    padding-right: 63px;
 }
 nav .nav-item:last-child {
     padding-right: 0;
@@ -240,13 +240,13 @@ nav.inverted .nav-item a:after{
 
 /* HOME / INFO */
 
+#home{
+    cursor: url('../images/info-cursor.png'), auto;
+}
 #home .col{
     margin-left: 44%;
     width: 56%;
     text-align: left;
-}
-#info{
-    cursor: url('../images/info-cursor.png'), auto;
 }
 #info .col.us{
     width: 44%;
@@ -319,18 +319,27 @@ nav.inverted .nav-item a:after{
     background-color: #A2D0CC;
     margin-left: 50%;
     text-align: left;
+    position: relative;
 }
-#services .services-hider{
+.hider{
     width: calc(50% - 20px);
+    left: 50%;
     height: 140px;
     background-color: #A2D0CC;
     position: fixed;
-    left: 50%;
     z-index: 2;
+    transition: opacity 0.3s ease;
+}
+.hider.visible{
+    opacity: 1;
+}
+.hider.hider-bottom{
+    margin-top: calc(100vh - 140px);
 }
 #services .services-list p{
     color: #fff;
     line-height: 1.25;
+    font-weight: bold;
 }
 .swiper-slide#services {
     font-size: 18px;
@@ -371,6 +380,7 @@ a.work .work-caption{
 a.work .work-caption p{
     opacity: 1;
     transition: all 0.8s ease;
+    font-size: 1.063rem;
     line-height: 1.25;
 }
 a.work:hover .work-caption{
@@ -460,6 +470,14 @@ a.work:hover .work-caption p{
     text-align: center;
     color: #fff;
 }
+#contact a{
+    color: #fff;
+    text-decoration: none;
+}
+#contact a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
 #contact p{
     line-height: 1.5rem;
 }
@@ -470,8 +488,14 @@ a.work:hover .work-caption p{
     background-color: #FFC8AF;
     text-align: center;
 }
+#clients h2{
+    padding-bottom: 15px;
+}
+#clients .swiper-wrapper {
+    transition-duration: 2s!important;
+}
 #clients .swiper-container {
-    width: 60%;
+    width: 55%;
     height: auto;
 }
 a.client{
