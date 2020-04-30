@@ -11,20 +11,10 @@
     <meta name="Resource-type" content="Document" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jpreloader.css" />
 </head>
 <body>
-    <div id="loader">
-        <div class="loader-inner v-center">
-            <div class="container">
-                <div class="person person1"></div>
-                <div class="person person2"></div>
-                <div class="person person3"></div>
-            </div>
-        </div>
-        <div class="loader-welcome v-center">
-            <p class="font-ogg">Hola!</p>
-        </div>
-    </div>
+    
     <nav>
         <div class="container">
             <div class="col brand">
@@ -112,6 +102,10 @@
             <div id="services" class="swiper-slide position-absolute" data-history="services">
                 <div class="hider hider-top"></div>
                 <div class="hider hider-bottom"></div>
+                <div class="scroll">
+                    <div class="line"></div>
+                    <span>scroll</span>
+                </div>
                 <div class="container">
                     <div class="col services-description v-center">
                         <p>
@@ -317,12 +311,19 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
     <script src="js/swiper.min.js"></script>
-
+    <script src="js/jpreloader.js"></script>
     <!-- Initialize Swiper -->
     <script>
-        $(window).on('load', function () {
-            $('.loader-welcome').animate({top: 0}, 2000, function() {
-                $('#loader').animate({top: '-100%'}, 1200);
+        $('body').jpreLoader({
+            splashID: "#jSplash",
+            autoClose: true,
+        }, function() {	//callback function
+            clearInterval(timer);
+            $('#footer')
+            .animate({"bottom":0}, 500);
+            $('#header')
+            .animate({"top":0}, 800, function() {
+                $('#wrapper').fadeIn(1000);
             });
         });
         var navigation = new Swiper('#content', {

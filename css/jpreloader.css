@@ -1,0 +1,80 @@
+#jpreOverlay {
+  background-color: #1417cc;
+}
+#jpreSlide{
+  font-size:22px;
+  font-weight:bold;
+  color:#ccc;
+  text-align:center;
+  width:50%;
+  height:30%;
+}
+#jpreLoader{
+  width:100%;
+  height:100%;
+}
+#jpreBar {
+  position: absolute;
+  bottom: 0;
+  background-color: #1E28BE;
+  animation: progress 2s linear infinite;
+  -moz-animation: progress 2s linear infinite;
+  -webkit-animation: progress 2s linear infinite;
+  -ms-animation: progress 2s linear infinite;
+  -o-animation: progress 2s linear infinite;
+}
+#jpreBox{
+  overflow: hidden;
+  height: 3rem;
+}
+#jprePercentage {
+  top: 0;
+  color:#fff;
+  font-size: 3rem;
+  text-align:center;
+  transition: all 0.5s ease 0.5s;
+}
+
+#jpreButton{
+}
+
+@-webkit-keyframes progress {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: -60px -60px;
+}
+}
+@-moz-keyframes progress {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: -60px -60px;
+}
+}
+@-ms-keyframes progress {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: -60px -60px;
+}
+}
+@-o-keyframes progress {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: -60px -60px;
+}
+}
+@keyframes progress {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: -60px -60px;
+}
+}
