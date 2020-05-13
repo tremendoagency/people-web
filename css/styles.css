@@ -50,7 +50,7 @@ body.index{
 }
 p{
   font-size: 1rem;
-  line-height: 2;
+  line-height: 1.5;
 }
 p.small{
   font-size: 1rem;
@@ -751,6 +751,7 @@ footer .swipe{
   color: #000;
   transition: all 0.5s ease 0.5s;
   opacity: 0;
+  display: none;
 }
 footer .swipe span{
   margin-top: 0.5rem;
@@ -778,6 +779,10 @@ footer .swipe.show{
 
 
 @media (min-width: 992px) {
+  p{
+    font-size: 1rem;
+    line-height: 2;
+  }
   .col{
     padding: 0;
   }
