@@ -100,6 +100,7 @@
     event.preventDefault();
     navigation.slideTo($(this).attr('data-slide'));
     $('.mobile-navbar').removeClass('show');
+    $('#navbar-toggler').removeClass('open');
   });
 
   // Info Section
