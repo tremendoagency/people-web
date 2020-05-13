@@ -743,7 +743,7 @@ footer.inverted a{
 footer.inverted .item a:after{
   background: #fff!important;
 }
-footer .swipe{
+footer .item.swipe{
   position: relative;
   text-align: center;
   z-index: 11;
@@ -751,13 +751,12 @@ footer .swipe{
   color: #000;
   transition: all 0.5s ease 0.5s;
   opacity: 0;
-  display: inline-block;
 }
-footer .swipe span{
+footer .item.swipe span{
   margin-top: 0.5rem;
   font-size: 0.875rem;
 }
-footer .swipe .line{
+footer .item.swipe .line{
   position: absolute;
   width: 0;
   height: 1px;
@@ -766,13 +765,13 @@ footer .swipe .line{
   background-color: #000;
   transition: all 0.5s ease 0.5s;
 }
-footer .swipe.inverted{
+footer .item.swipe.inverted{
   color: #fff;
 }
-footer .swipe.inverted .line{
+footer .item.swipe.inverted .line{
   background-color: #fff;
 }
-footer .swipe.show{
+footer .item.swipe.show{
   opacity: 1;
 }
 
@@ -833,7 +832,7 @@ footer .swipe.show{
   .desktop{
     display: block;
   }
-  footer .swipe{
+  footer .item.swipe{
     display: none;
   }
   p{
