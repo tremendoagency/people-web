@@ -115,6 +115,33 @@ h2{
 .desktop{
   display: none;
 }
+.breadcrumb{
+  position: absolute;
+  top: 105px;
+  padding: 0 45px;
+  z-index: 3;
+  color: #000;
+  transition: all 0.5s ease 0.5s;
+}
+.breadcrumb.inverted{
+  color: #fff;
+}
+
+@keyframes swipe {
+  0% {
+    width: 0;
+    left: 0px;
+  }
+  50%{
+    width: 100%;
+    left: 0;
+  }
+  100%{
+    width: 100%;
+    left: 100%;
+  }
+
+}
 
 /* PRELOADER */
 
@@ -358,6 +385,9 @@ nav.inverted .nav-item a:after{
 #home .col{
   text-align: left;
 }
+#info .container{
+  height: 100%;
+}
 #info .swiper-slide{
   background-color: #fff;
 }
@@ -396,11 +426,20 @@ nav.inverted .nav-item a:after{
   width: 100%; 
   left: 0; 
 }
+#info .swipe{
+  color: #000;
+}
+#info .swipe .line{
+  background-color: #000;
+}
 
 /* SERVICES */
 
-#services .bigscroller{
-  padding-top: 140px;
+#services .swipe{
+  color: #fff;
+}
+#services .swipe .line{
+  background-color: #fff;
 }
 #services .services-description{
   position: relative;
@@ -433,6 +472,17 @@ nav.inverted .nav-item a:after{
   height: 0;
   background-color: #000;
   animation: scroll 1.2s infinite;
+}
+#services-mobile{
+  height: 100%;
+  background-color: #A2D0CC;
+}
+#services-mobile .swiper-slide{
+  background-color: #A2D0CC;
+}
+#services-mobile p{
+  color: #fff;
+  margin:0;
 }
 @keyframes scroll {
   0% {
@@ -523,16 +573,18 @@ a.work:hover .work-caption p{
 
 /* CASE DETAIL */
 
+#case .container{
+  height: 100%;
+}
 #case .col{
-  width: 50%;
+  width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 #case .case-description{
-  position: fixed;
   height: 100%;
   text-align: left;
-  padding: 0 12.5%;
+  padding: 12.5%;
   background-color: #000;
   color: #fff;
 }
@@ -540,9 +592,8 @@ a.work:hover .work-caption p{
   line-height: 1.25;
 }
 #case .case-images{
-  padding: 70px 35px;
+  padding: 35px;
   background-color: #fff;
-  margin-left: 50%;
   text-align: left;
 }
 #case .case-images img{
@@ -692,6 +743,40 @@ footer.inverted a{
 footer.inverted .item a:after{
   background: #fff!important;
 }
+footer .swipe{
+  position: relative;
+  text-align: center;
+  z-index: 11;
+  overflow: hidden;
+  color: #000;
+  transition: all 0.5s ease 0.5s;
+  opacity: 0;
+}
+footer .swipe span{
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+footer .swipe .line{
+  position: absolute;
+  width: 0;
+  height: 1px;
+  animation: swipe 1.2s infinite;
+  left: 0;
+  background-color: #000;
+  transition: all 0.5s ease 0.5s;
+}
+footer .swipe.inverted{
+  color: #fff;
+}
+footer .swipe.inverted .line{
+  background-color: #fff;
+}
+footer .swipe.show{
+  opacity: 1;
+}
+
+
+
 @media (min-width: 992px) {
   .col{
     padding: 0;
@@ -743,13 +828,16 @@ footer.inverted .item a:after{
   .desktop{
     display: block;
   }
+  #footer .item.swipe{
+    display: none;
+  }
   p{
     font-size: 1.125rem;
   }
   nav .col.collapsable{
     display: flex;
   }
-  .container{
+  .container:not(#services-mobile){
     display: flex;
     flex-direction: row;
   }
@@ -772,5 +860,27 @@ footer.inverted .item a:after{
   #clients .swiper-container {
     width: 66%;
     margin: 0;
+  }
+  #case .col{
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #case .case-description{
+    position: fixed;
+    height: 100%;
+    text-align: left;
+    padding: 0 12.5%;
+    background-color: #000;
+    color: #fff;
+  }
+  #case .case-description p{
+    line-height: 1.25;
+  }
+  #case .case-images{
+    padding: 70px 35px;
+    background-color: #fff;
+    margin-left: 50%;
+    text-align: left;
   }
 }

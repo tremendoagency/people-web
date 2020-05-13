@@ -49,6 +49,7 @@
             </div>
         </div>
     </nav>
+    <div class="breadcrumb mobile"></div>
     <div class="mobile-navbar v-center">
         <div class="text-uppercase">
             <a href="#" data-slide="0">Home</a>
@@ -62,7 +63,7 @@
     <!-- Swiper -->
     <div id="content" class="swiper-container">
         <div class="swiper-wrapper">
-            <div id="home" class="swiper-slide v-center" data-history="home">
+            <div id="home" class="swiper-slide v-center" data-history="home" data-breadcrumb="Home">
                 <div class="container">
                     <div class="col col-56 col-offset">
                         <p class="mobile">
@@ -84,12 +85,12 @@
                     </div>
                 </div>
             </div>
-            <div id="info" class="swiper-slide v-center" data-history="info">
+            <div id="info" class="swiper-slide v-center to-swipe" data-history="info" data-breadcrumb="Info">
                 <div class="container">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide info-slide about">
-                                <div class="col col-44">
+                            <div class="swiper-slide ignore-slide about v-center">
+                                <div class="col col-44 desktop">
                                     <a href="#" data-slide="1">Quienes somos</a>
                                 </div>
                                 <div class="col col-56">
@@ -111,8 +112,8 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="swiper-slide info-slide team">
-                                <div class="col col-44">
+                            <div class="swiper-slide ignore-slide team v-center">
+                                <div class="col col-44 desktop">
                                     <a href="#" data-slide="0">Cerrar</a>
                                 </div>
                                 <div class="col col-56">
@@ -149,96 +150,83 @@
                     </div>
                 </div>
             </div>
-            <div id="services" class="swiper-slide position-absolute" data-history="services">
+            <div id="services" class="swiper-slide position-absolute to-swipe" data-history="services" data-breadcrumb="Servicios">
                 <div class="hider hider-top desktop"></div>
                 <div class="hider hider-bottom desktop"></div>
                 <div class="scroll desktop">
                     <div class="line"></div>
                     <span>scroll</span>
                 </div>
-                <div class="container">
-                    <div class="mobile">
-                        <div class="bigscroller">
-                            <div class="col col-50 services-description">
-                                <p>
-                                    Ofrecemos una gran cantidad de
-                                    <br/>servicios, para poder desarrollar
-                                    <br/>campañas integrales que ayuden a
-                                    <br/>las marcas a crear conexiones
-                                    <br/>reales y duraderas con sus clientes.
-                                </p>
-                            </div>
-                            <div class="col col-50 services-list">
-                                <p>estrategia de marca</p>
-                                <p>ideas y conceptos</p>
-                                <p>branding</p>
-                                <p>campañas integrales</p>
-                                <p>producción</p>
-                                <p>storytelling</p>
-                                <p>dirección de arte</p>
-                                <p>estrategia digital</p>
-                                <p>website & mobile</p>
-                                <p>redes sociales</p>
-                                <p>seo/sem</p>
-                                <p>mailing</p>
-                                <p>medios</p>
-                                <p>contenido audiovisual</p>
-                                <p>edición</p>
-                                <p>animación</p>
-                                <p>fotografía</p>
-                                <p>ilustración </p>
-                                <p>infografías</p>
-                                <p>eventos </p>
-                                <p>experiencias</p>
-                                <p>sponsoring</p>
-                                <p>advocacy</p>
-                                <p>entretenimiento</p>
-                            </div>
-                        </div>
+                <div class="container desktop">
+                    <div class="col col-50 services-description v-center">
+                        <p>
+                            Ofrecemos una gran cantidad de
+                            <br/>servicios, para poder desarrollar
+                            <br/>campañas integrales que ayuden a
+                            <br/>las marcas a crear conexiones
+                            <br/>reales y duraderas con sus clientes.
+                        </p>
                     </div>
-                    <div class="desktop" style="width: 100%;">
-                        <div class="col col-50 services-description v-center">
-                            <p>
-                                Ofrecemos una gran cantidad de
-                                <br/>servicios, para poder desarrollar
-                                <br/>campañas integrales que ayuden a
-                                <br/>las marcas a crear conexiones
-                                <br/>reales y duraderas con sus clientes.
-                            </p>
-                        </div>
-                        <div class="col col-50 services-list">
-                            <p>estrategia de marca</p>
-                            <p>ideas y conceptos</p>
-                            <p>branding</p>
-                            <p>campañas integrales</p>
-                            <p>producción</p>
-                            <p>storytelling</p>
-                            <p>dirección de arte</p>
-                            <p>estrategia digital</p>
-                            <p>website & mobile</p>
-                            <p>redes sociales</p>
-                            <p>seo/sem</p>
-                            <p>mailing</p>
-                            <p>medios</p>
-                            <p>contenido audiovisual</p>
-                            <p>edición</p>
-                            <p>animación</p>
-                            <p>fotografía</p>
-                            <p>ilustración </p>
-                            <p>infografías</p>
-                            <p>eventos </p>
-                            <p>experiencias</p>
-                            <p>sponsoring</p>
-                            <p>advocacy</p>
-                            <p>entretenimiento</p>
+                    <div class="col col-50 services-list">
+                        <p>estrategia de marca</p>
+                        <p>ideas y conceptos</p>
+                        <p>branding</p>
+                        <p>campañas integrales</p>
+                        <p>producción</p>
+                        <p>storytelling</p>
+                        <p>dirección de arte</p>
+                        <p>estrategia digital</p>
+                        <p>website & mobile</p>
+                        <p>redes sociales</p>
+                        <p>seo/sem</p>
+                        <p>mailing</p>
+                        <p>medios</p>
+                        <p>contenido audiovisual</p>
+                        <p>edición</p>
+                        <p>animación</p>
+                        <p>fotografía</p>
+                        <p>ilustración </p>
+                        <p>infografías</p>
+                        <p>eventos </p>
+                        <p>experiencias</p>
+                        <p>sponsoring</p>
+                        <p>advocacy</p>
+                        <p>entretenimiento</p>
+                    </div>
+                </div>
+                <div id="services-mobile" class="container mobile">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide ignore-slide v-center ignore-slide">
+                                <div class="col">
+                                    <p>
+                                        Ofrecemos una gran cantidad de
+                                        servicios, para poder desarrollar
+                                        campañas integrales que ayuden a
+                                        las marcas a crear conexiones
+                                        reales y duraderas con sus clientes.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ignore-slide v-center services-slide">
+                                <div class="col">
+                                    <p>
+                                        estrategia de marca, ideas y conceptos, branding, campañas integrales,
+                                        producción, storytelling, dirección de arte, estrategia digital,
+                                        website & mobile, redes sociales, seo/sem, mailing, medios, contenido audiovisual,
+                                        edición, animación, fotografía, ilustración , infografías, eventos,
+                                        experiencias, sponsoring, advocac y entretenimiento.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="works" class="swiper-slide v-center invert-menu" data-history="works">
+            <div id="works" class="swiper-slide v-center invert-menu" data-history="works" data-breadcrumb="Trabajos">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide v-center" style="margin-left: 45px;">
+                        <div class="swiper-slide ignore-slide v-center" style="margin-left: 45px;">
                             <a class="work" href="work.html">
                                 <img src="images/work/work01.jpg" alt="">
                                 <div class="work-caption v-center">
@@ -249,7 +237,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="work" href="work.html">
                                 <img src="images/work/work01.jpg" alt="">
                                 <div class="work-caption v-center">
@@ -260,7 +248,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="work" href="work.html">
                                 <img src="images/work/work01.jpg" alt="">
                                 <div class="work-caption v-center">
@@ -271,7 +259,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="work" href="work.html">
                                 <img src="images/work/work01.jpg" alt="">
                                 <div class="work-caption v-center">
@@ -300,66 +288,66 @@
                     
                 </div>
             </div>
-            <div id="clients" class="swiper-slide v-center" data-history="clients">
+            <div id="clients" class="swiper-slide v-center" data-history="clients" data-breadcrumb="Clientes">
                 <div class="swiper-container">
                     <h2 class="font-ogg pb-2">confían en nosotros</h2>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide v-center">
+                        <div class="swiper-slide ignore-slide v-center">
                             <a class="client" href="#">
                                 <img src="images/clients/client01.jpg" alt="">
                             </a>
@@ -367,7 +355,7 @@
                     </div>
                 </div>
             </div>
-            <div id="contact" class="swiper-slide v-center invert-menu" data-history="contact">
+            <div id="contact" class="swiper-slide v-center invert-menu" data-history="contact" data-breadcrumb="Contacto">
                 <div>
                     <h2 class="text-white text-center">
                         hablemos!
@@ -390,6 +378,10 @@
                 </li>
                 <li class="item">
                     <a href="#">Instagram</a>
+                </li>
+                <li class="item swipe">
+                    <div class="line"></div>
+                    <span>swipe</span>
                 </li>
             </ul>
         </div>
