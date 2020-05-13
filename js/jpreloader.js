@@ -119,7 +119,7 @@
 				position: 'relative',
 			})
 			.appendTo(jBox)
-			.html('0%');
+			.html('');
 		}
 		if( !jpreOptions.autoclose ) {
 			jButton = $('<div></div>')
@@ -187,7 +187,7 @@
 		}, 500, 'linear');
 		
 		if(jpreOptions.showPercentage) {
-			$(jPer).text(per+"%");
+			//$(jPer).text(per+"%");
 		}
 		
 		//if all images loaded
@@ -196,7 +196,7 @@
 			setCookie();	//create cookie
 			
 			if(jpreOptions.showPercentage) {
-				$(jPer).text("100%");
+				//$(jPer).text("100%");
 			}
 			
 			//fire debug mode
@@ -237,8 +237,8 @@
 						});
 					}, 500);
 				}, 1000);
-			}, 750);
-		}, 500);
+			}, 500);
+		}, 0);
 			
 			//$(jPer).css({'top': '100%'});
 			//$(jPer).html('hola!');
