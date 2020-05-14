@@ -7,6 +7,9 @@
     splashID: "#jSplash",
     autoClose: true,
   }, function() {	//callback function
+    checkDevice();
+    invertNavbar();
+    toSwipe();
     $('#footer')
     .animate({"bottom":0}, 500);
     $('#header')
@@ -19,8 +22,6 @@
     checkDevice();
   });
 
-  checkDevice();
-
   function checkDevice(){
     var win = $(window); //this = window
     if (win.width() <= 992){
@@ -31,29 +32,38 @@
     }
   }
 
-  // Navigation
-
-  var navigation = new Swiper('#content', {
-    speed: 1000,
-    direction: 'vertical',
-    mousewheel: true,
-    forceToAxis: true
-  });
-  navigation.on('slideChangeTransitionStart', function () {
+  function invertNavbar(){
     if ($('.swiper-slide-active').hasClass('invert-menu')){
-        $('nav, footer, #navbar-toggler, .breadcrumb, .swipe').addClass('inverted');
+      $('nav, footer, #navbar-toggler, .breadcrumb, .swipe').addClass('inverted');
     }
     else{
         $('nav, footer, #navbar-toggler, .breadcrumb, .swipe').removeClass('inverted');
     }
+  }
+
+  function toSwipe(){
     if ($('.swiper-slide-active').hasClass('to-swipe')){
       $('.swipe').addClass('show');
     }
     else{
       $('.swipe').removeClass('show');
     }
+  }
+
+  // Navigation
+
+  var navigation = new Swiper('#content', {
+    speed: 1000,
+    direction: 'vertical',
+    mousewheel: true,
+    forceToAxis: true,
+    hashNavigation:true
+  });
+  navigation.on('slideChangeTransitionStart', function () {
     $('nav li').removeClass('active');
     $('nav li').eq(navigation.realIndex).addClass('active');
+    invertNavbar();
+    toSwipe();
     breadCrumb();
   });
   navigation.on('slideChangeTransitionEnd', function () {
