@@ -157,21 +157,21 @@
   //Clients Section
 
   var clients = new Swiper('#clients .swiper-container', {
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    loop: true,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    loop: false,
     autoplay: {
         delay: 2500,
         disableOnInteraction: true,
     },
     breakpoints: {
         767: {
-            slidesPerView: 3,
-            slidesPerGroup: 3
+            slidesPerView: 2,
+            slidesPerGroup: 2
         },
         992: {
-            slidesPerView: 6,
-            slidesPerGroup: 3
+            slidesPerView: 2,
+            slidesPerGroup: 2
         }
     }
   });

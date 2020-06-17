@@ -774,8 +774,13 @@ footer .item.swipe.inverted .line{
 footer .item.swipe.show{
   opacity: 1;
 }
-
-
+@media (min-width: 767px) {
+  #clients .swiper-container {
+    /* width: 66%; */
+    width: 33%;
+    margin: 0;
+  }
+}
 
 @media (min-width: 992px) {
   p{
@@ -862,7 +867,8 @@ footer .item.swipe.show{
     width: 80%;
   }
   #clients .swiper-container {
-    width: 66%;
+    /* width: 66%; */
+    width: 25%;
     margin: 0;
   }
   #case .col{
